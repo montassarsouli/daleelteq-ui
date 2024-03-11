@@ -3,29 +3,44 @@ import img11 from "../image/img11.jpg";
 
 const CallToAction = () => {
   return (
-    <section className="py-14">
+    <section className="py-12">
       <div className="max-w-screen-xl mx-auto md:px-8">
         <div className="items-center gap-x-12 sm:px-4 md:px-0 lg:flex">
           <div className="flex-1 sm:hidden lg:block">
             <img src={img11} className="md:max-w-lg sm:rounded-lg" alt="" />
           </div>
           <div className="max-w-xl px-4 space-y-3 mt-6 sm:px-0 md:mt-0 lg:max-w-2xl">
-            <h3 className="text-indigo-600 font-semibold">
+            <h4 className="text-green-700 font-semibold">
               Professional services
-            </h3>
-            <p className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+            </h4>
+            <p className="text-gray-800 text-3xl font-semibold sm:text-xl">
               Build your SaaS solution with help from our experts
             </p>
             <p className="mt-3 text-gray-600">
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum, sed ut perspiciatis unde omnis iste natus
-              error sit voluptatem accusantium doloremque laudantium
+              Daleelteq specializes in management archiving and document
+              management solutions, providing secure storage, efficient data
+              acquisition, and streamlined workflows for organizations.
+            </p>
+            <p className="mt-3 text-gray-600">
+              Daleelteq's solutions are designed to meet the requirements of
+              various regulatory and industry standards.
+            </p>
+
+            <p className="mt-3 text-gray-600">
+              With over 20 years of experience, Daleelteq has a deep
+              understanding of the challenges that organizations face and can
+              provide tailored solutions to meet their specific business
+              objectives.
+            </p>
+
+            <p className="mt-3 text-gray-600">
+              Daleelteq is committed to providing excellent customer service and
+              offers affordable and scalable pricing options to meet the needs
+              of organizations of all sizes.
             </p>
             <a
               href="javascript:void(0)"
-              className="inline-flex gap-x-1 items-center text-indigo-600 hover:text-indigo-500 duration-150 font-medium"
+              className="inline-flex gap-x-1 items-center text-green-700 hover:text-green-600 duration-150 font-medium"
             >
               Learn more
               <svg

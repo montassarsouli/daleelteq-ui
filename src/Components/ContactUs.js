@@ -7,7 +7,7 @@ const ContactUs = () => {
   ];
 
   return (
-    <main className="flex overflow-hidden">
+    <main className="flex overflow-hidden my-20">
       <div className="flex-1 hidden lg:block">
         <img
           src="https://images.unsplash.com/photo-1697135807547-5fa9fd22d9ec?auto=format&fit=crop&q=80&w=3387&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

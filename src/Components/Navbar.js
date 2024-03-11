@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import img01 from "../image/img01.png";
+import img01 from "./image/img01.png";
 
 const dropdownNavs = [
   {
