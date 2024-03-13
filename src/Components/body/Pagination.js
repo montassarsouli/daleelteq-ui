@@ -6,7 +6,7 @@ const Pagination = () => {
   return (
     <div className="max-w-screen-xl mx-auto mt-12 px-4 text-gray-600 md:px-8">
       <div className="hidden justify-between text-sm md:flex">
-        <div>Page 1 OF 8</div>
+        <div>Page 1 OF 3</div>
         <div className="flex items-center gap-12" aria-label="Pagination">
           <ul className="flex items-center gap-1">
             {pages.map((item, idx) => (
