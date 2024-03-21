@@ -260,7 +260,7 @@ const Navbar = () => {
       isDrapdown: true,
       navs: aboutUsDropdown,
     },
-    { title: "Contact Us", path: "javascript:void(0)", isDrapdown: false },
+    { title: "Contact Us", path: "./ContactUs", isDrapdown: false },
   ];
 
   useEffect(() => {

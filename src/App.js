@@ -4,16 +4,18 @@ import TeamSection from "./Components/TeamSection";
 import ContactUs from "./Components/ContactUs";
 import Footer from "./Components/Footer";
 import Body from "./Components/Body/Body";
-import CallToAction from "./Components/Body/CallToAction";
+import { Routes } from "react-router-dom";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <CallToAction />
-      <ContactUs />
-      <TeamSection />
-      <Footer />
+      <Routes>
+        <Navbar />
+        <Body />
+        <ContactUs />
+        <TeamSection />
+        <Footer />
+      </Routes>
     </>
   );
 }
