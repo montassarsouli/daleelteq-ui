@@ -4,7 +4,6 @@ import "react-slideshow-image/dist/styles.css";
 import CallToAction from "./CallToAction";
 import Stats from "./Stats";
 import Tayseer from "./Tayseer";
-import Pagination from "./Pagination";
 
 const Slides = () => {
   return (

@@ -1,6 +1,8 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import img01 from "../image/img01.png";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const solutionsDropdown = [
   {
@@ -256,11 +258,11 @@ const Navbar = () => {
     },
     {
       title: "About Us",
-      path: "javascript:void(0)",
+      path: "javascript",
       isDrapdown: true,
       navs: aboutUsDropdown,
     },
-    { title: "Contact Us", path: "./ContactUs", isDrapdown: false },
+    { title: "Contact Us", path: "#contact", isDrapdown: false },
   ];
 
   useEffect(() => {
@@ -367,12 +369,13 @@ const Navbar = () => {
                         )}
                       </button>
                     ) : (
-                      <a
-                        href={item.path}
+                      <HashLink
+                        to={item.path}
                         className="block text-gray-700 hover:text-green-700"
+                        smooth
                       >
                         {item.title}
-                      </a>
+                      </HashLink>
                     )}
                     {item.isDrapdown &&
                     drapdownState.idx == idx &&
@@ -440,22 +443,6 @@ const Navbar = () => {
                     />
                   </div>
                 </form>
-                <li>
-                  <a
-                    href="javascript:void(0)"
-                    className="block py-3 text-center text-gray-700 hover:text-green-700 border rounded-lg md:border-none"
-                  >
-                    Log in
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="javascript:void(0)"
-                    className="block py-2 px-3 font-medium text-center text-white bg-green-700 hover:bg-green-600 active:bg-green-500 active:shadow-none rounded-lg shadow md:inline"
-                  >
-                    Sign in
-                  </a>
-                </li>
               </div>
             </ul>
           </div>

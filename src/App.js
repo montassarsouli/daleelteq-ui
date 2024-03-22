@@ -1,25 +1,27 @@
 import React from "react";
 import Navbar from "./Components/Head/Navbar";
-import TeamSection from "./Components/TeamSection";
-import ContactUs from "./Components/ContactUs";
 import Footer from "./Components/Footer";
 import Body from "./Components/Body/Body";
-import { Routes } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import ScrollTopButton from "./Components/ScrollTopButton";
 
 function App() {
   return (
     <>
-      <Routes>
-        <Navbar />
-        <Body />
-        <ContactUs />
-        <TeamSection />
-        <Footer />
-      </Routes>
+      <Navbar />
+      <Body />
+      <Footer />
+      <ScrollTopButton />
     </>
   );
 }
 export default App;
 /*
- <Body />
+      <Routes>
+        <Route path="/" element={} />
+        <Route path="/" element={} />
+        <Route path="/ContactUs" element={} />
+        <Route path="/" element={} />
+        <Route path="/" element={} />
+      </Routes>
 */

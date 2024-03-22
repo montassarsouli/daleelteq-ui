@@ -1,45 +1,23 @@
 const TeamSection = () => {
   const team = [
     {
-      avatar:
-        "https://images.unsplash.com/photo-1511485977113-f34c92461ad9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ",
+      avatar: "",
       name: "Martiana dialan",
       title: "Product designer",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
     },
     {
-      avatar: "https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg",
+      avatar: "",
       name: "Micheal colorand",
       title: "Software engineer",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
     },
     {
-      avatar: "https://randomuser.me/api/portraits/women/79.jpg",
+      avatar: "",
       name: "Brown Luis",
       title: "Full stack engineer",
-      linkedin: "javascript:void(0)",
-      twitter: "javascript:void(0)",
-    },
-    {
-      avatar: "https://randomuser.me/api/portraits/women/63.jpg",
-      name: "Lysa sandiago",
-      title: "Head of designers",
-      linkedin: "javascript:void(0)",
-      twitter: "javascript:void(0)",
-    },
-    {
-      avatar: "https://randomuser.me/api/portraits/men/86.jpg",
-      name: "Daniel martin",
-      title: "Product designer",
-      linkedin: "javascript:void(0)",
-      twitter: "javascript:void(0)",
-    },
-    {
-      avatar: "https://randomuser.me/api/portraits/men/46.jpg",
-      name: "Vicky tanson",
-      title: "Product manager",
       linkedin: "javascript:void(0)",
       twitter: "javascript:void(0)",
     },
@@ -49,12 +27,34 @@ const TeamSection = () => {
     <section className="py-14">
       <div className="max-w-screen-xl mx-auto px-4 md:px-8">
         <div className="max-w-xl">
-          <h3 className="text-gray-800 text-3xl font-semibold sm:text-4xl">
+          <h3 className="text-gray-800 text-2xl font-semibold sm:text-2xl">
             Meet our team
           </h3>
           <p className="text-gray-600 mt-3">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.Lorem Ipsum has been the industry's standard dummy.
+            We are a team of passionate and experienced professionals who are
+            dedicated to providing our clients with the highest quality of
+            service.
+            <p className="text-gray-600 mt-3"></p>
+            We have a wealth of knowledge and expertise in a wide range of
+            areas, and we are always ready to go the extra mile to help our
+            clients achieve their goals.
+            <p className="text-gray-600 mt-3"></p>
+            We are committed to building lasting relationships with our clients,
+            and we believe that the best way to do that is by providing them
+            with the personalized attention and support that they deserve.
+            <p className="text-gray-600 mt-3">
+              We are always available to answer your questions, provide advice,
+              and help you troubleshoot any problems that you may encounter.
+            </p>
+            <p className="text-gray-600 mt-3">
+              We are confident that we can help you achieve your business goals.
+            </p>
+            <p className="text-gray-600 mt-3">
+              Contact us today to learn more about our services and how we can
+              help you succeed.
+            </p>
+            <p className="text-gray-600 mt-3"></p>
+            Our team members:
           </p>
         </div>
         <div className="mt-12">
@@ -72,7 +72,7 @@ const TeamSection = () => {
                   <h4 className="text-gray-700 font-semibold sm:text-lg">
                     {item.name}
                   </h4>
-                  <p className="text-indigo-600">{item.title}</p>
+                  <p className="text-green-600">{item.title}</p>
                   <div className="mt-3 flex gap-4 text-gray-400">
                     <a href={item.twitter}>
                       <svg

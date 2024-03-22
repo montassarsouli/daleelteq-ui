@@ -1,5 +1,5 @@
 import React from "react";
-import img31 from "../image/img31.jpg";
+import img31 from "../ImagesBody/img31.jpg";
 
 const Tayseer = () => {
   return (

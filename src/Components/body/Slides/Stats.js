@@ -1,5 +1,5 @@
 import React from "react";
-import img21 from "../image/img21.jpg";
+import img21 from "../ImagesBody/img21.jpg";
 
 const Stats = () => {
   const stats = [

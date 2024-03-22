@@ -65,7 +65,7 @@ const ContactUs = () => {
   ];
 
   return (
-    <main className="py-14">
+    <main className="py-14" id="contact">
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
         <div className="max-w-lg gap-8 lg:justify-center lg:flex lg:max-w-none">
           <div className="max-w-lg space-y-3">

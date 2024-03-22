@@ -1,5 +1,5 @@
 import React from "react";
-import img11 from "../image/img11.jpg";
+import img11 from "../ImagesBody/img11.jpg";
 
 const CallToAction = () => {
   return (
