@@ -1,125 +1,93 @@
+import React from "react";
+
 const TeamSection = () => {
   const team = [
     {
-      avatar: "",
-      name: "Martiana dialan",
-      title: "Product designer",
-      linkedin: "javascript:void(0)",
-      twitter: "javascript:void(0)",
+      avatar: "https://via.placeholder.com/150",
+      name: "Nom Prénom",
+      title: "occupation",
+      linkedin: "https://www.linkedin.com/in/martianadialan/",
+      twitter: "https://twitter.com/martiana_dialan",
     },
     {
-      avatar: "",
-      name: "Micheal colorand",
-      title: "Software engineer",
-      linkedin: "javascript:void(0)",
-      twitter: "javascript:void(0)",
+      avatar: "https://via.placeholder.com/150",
+      name: "Nom Prénom",
+      title: "occupation",
+      linkedin: "https://www.linkedin.com/in/michealcolorand/",
+      twitter: "https://twitter.com/micheal_colorand",
     },
     {
-      avatar: "",
-      name: "Brown Luis",
-      title: "Full stack engineer",
-      linkedin: "javascript:void(0)",
-      twitter: "javascript:void(0)",
+      avatar: "https://via.placeholder.com/150",
+      name: "Nom Prénom",
+      title: "occupation",
+      linkedin: "https://www.linkedin.com/in/brownluis/",
+      twitter: "https://twitter.com/brown_luis",
     },
   ];
 
   return (
-    <section className="py-14">
-      <div className="max-w-screen-xl mx-auto px-4 md:px-8">
-        <div className="max-w-xl">
-          <h3 className="text-gray-800 text-2xl font-semibold sm:text-2xl">
-            Meet our team
-          </h3>
-          <p className="text-gray-600 mt-3">
-            We are a team of passionate and experienced professionals who are
-            dedicated to providing our clients with the highest quality of
-            service.
-            <p className="text-gray-600 mt-3"></p>
-            We have a wealth of knowledge and expertise in a wide range of
-            areas, and we are always ready to go the extra mile to help our
-            clients achieve their goals.
-            <p className="text-gray-600 mt-3"></p>
-            We are committed to building lasting relationships with our clients,
-            and we believe that the best way to do that is by providing them
-            with the personalized attention and support that they deserve.
-            <p className="text-gray-600 mt-3">
-              We are always available to answer your questions, provide advice,
-              and help you troubleshoot any problems that you may encounter.
+    <section className="py-12">
+      <div className="max-w-screen-xl mx-auto px-4">
+        <div className="flex justify-center">
+          <div className="max-w-xl w-full">
+            <h3 className="text-gray-800 text-2xl font-semibold sm:text-3xl mb-6">
+              Meet Our Team
+            </h3>
+            <p className="text-gray-600 mb-8">
+              We are a team of passionate and experienced professionals who are
+              dedicated to providing our clients with the highest quality of
+              service.
             </p>
-            <p className="text-gray-600 mt-3">
-              We are confident that we can help you achieve your business goals.
-            </p>
-            <p className="text-gray-600 mt-3">
-              Contact us today to learn more about our services and how we can
-              help you succeed.
-            </p>
-            <p className="text-gray-600 mt-3"></p>
-            Our team members:
-          </p>
-        </div>
-        <div className="mt-12">
-          <ul className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {team.map((item, idx) => (
-              <li key={idx} className="flex gap-4 items-center">
-                <div className="flex-none w-24 h-24">
-                  <img
-                    src={item.avatar}
-                    className="w-full h-full rounded-full"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <h4 className="text-gray-700 font-semibold sm:text-lg">
-                    {item.name}
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {team.map((member, index) => (
+                <li key={index} className="flex flex-col items-center">
+                  <div className="w-32 h-32 overflow-hidden rounded-full mb-4">
+                    <img
+                      src={member.avatar}
+                      alt={member.name}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <h4 className="text-gray-800 font-semibold text-lg mb-1">
+                    {member.name}
                   </h4>
-                  <p className="text-green-600">{item.title}</p>
-                  <div className="mt-3 flex gap-4 text-gray-400">
-                    <a href={item.twitter}>
+                  <p className="text-green-600 mb-2">{member.title}</p>
+                  <div className="flex space-x-4">
+                    <a
+                      href={member.twitter}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg
-                        className="w-5 h-5 duration-150 hover:text-gray-500"
+                        className="w-6 h-6 text-gray-500 hover:text-gray-700 transition duration-300"
                         fill="currentColor"
-                        viewBox="0 0 48 48"
+                        viewBox="0 0 24 24"
                       >
-                        <g clip-path="url(#clip0_17_80)">
-                          <path
-                            fill="currentColor"
-                            d="M15.1 43.5c18.11 0 28.017-15.006 28.017-28.016 0-.422-.01-.853-.029-1.275A19.998 19.998 0 0048 9.11c-1.795.798-3.7 1.32-5.652 1.546a9.9 9.9 0 004.33-5.445 19.794 19.794 0 01-6.251 2.39 9.86 9.86 0 00-16.788 8.979A27.97 27.97 0 013.346 6.299 9.859 9.859 0 006.393 19.44a9.86 9.86 0 01-4.462-1.228v.122a9.844 9.844 0 007.901 9.656 9.788 9.788 0 01-4.442.169 9.867 9.867 0 009.195 6.843A19.75 19.75 0 010 39.078 27.937 27.937 0 0015.1 43.5z"
-                          />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_17_80">
-                            <path fill="currentColor" d="M0 0h48v48H0z" />
-                          </clipPath>
-                        </defs>
+                        <path d="M23 4.75c-.875.383-1.818.641-2.8.76A5.063 5.063 0 0 0 22.813 3c-1.025.6-2.15 1.038-3.363 1.273a5.038 5.038 0 0 0-8.163 4.84C11.688 9.8 9.138 8.325 6.85 5.7 6.488 6.388 6.3 7.15 6.3 7.95a5.03 5.03 0 0 0 2.25 4.213 4.985 4.985 0 0 1-2.275-.625v.063a5.041 5.041 0 0 0 4.038 4.938c-.425.113-.85.163-1.275.163-.25 0-.488-.038-.713-.075.488 1.575 1.888 2.725 3.563 2.75a10.132 10.132 0 0 1-6.3 2.163c-.4 0-.788-.038-1.175-.113a14.167 14.167 0 0 0 7.663 2.25c9.025 0 13.95-7.513 13.95-13.987 0-.213 0-.425-.013-.638a9.942 9.942 0 0 0 2.45-2.55c-.875.488-1.825.8-2.825.963z"></path>
                       </svg>
                     </a>
-                    <a href={item.linkedin}>
+                    <a
+                      href={member.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <svg
-                        className="w-5 h-5 duration-150 hover:text-gray-500"
-                        fill="none"
-                        viewBox="0 0 48 48"
+                        className="w-6 h-6 text-gray-500 hover:text-gray-700 transition duration-300"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
                       >
-                        <g clip-path="url(#clip0_17_68)">
-                          <path
-                            fill="currentColor"
-                            d="M44.447 0H3.544C1.584 0 0 1.547 0 3.46V44.53C0 46.444 1.584 48 3.544 48h40.903C46.407 48 48 46.444 48 44.54V3.46C48 1.546 46.406 0 44.447 0zM14.24 40.903H7.116V17.991h7.125v22.912zM10.678 14.87a4.127 4.127 0 01-4.134-4.125 4.127 4.127 0 014.134-4.125 4.125 4.125 0 010 8.25zm30.225 26.034h-7.115V29.766c0-2.653-.047-6.075-3.704-6.075-3.703 0-4.265 2.896-4.265 5.887v11.325h-7.107V17.991h6.826v3.13h.093c.947-1.8 3.272-3.702 6.731-3.702 7.21 0 8.541 4.744 8.541 10.912v12.572z"
-                          />
-                        </g>
-                        <defs>
-                          <clipPath id="clip0_17_68">
-                            <path fill="currentColor" d="M0 0h48v48H0z" />
-                          </clipPath>
-                        </defs>
+                        <path d="M21.937 0H2.063C.938 0 0 .938 0 2.063v19.874C0 23.062.938 24 2.063 24H21.94A2.072 2.072 0 0 0 24 21.937V2.062C24 .937 23.062 0 21.937 0zM7.75 20.375H4.313V9.688H7.75v10.687zM6.03 8.07a2.06 2.06 0 0 1-2.055-2.063A2.058 2.058 0 0 1 6.03 3.95a2.062 2.062 0 1 1 0 4.12zm14.313 12.313h-3.437v-5.376c0-1.28-.025-2.925-1.775-2.925-1.775 0-2.045 1.387-2.045 2.818V20.38H8.94V9.688h3.374v1.5c.45-.688 1.225-1.325 2.875-1.325 2.45 0 4.575 1.613 4.575 4.963v5.55h.001z"></path>
                       </svg>
                     </a>
                   </div>
-                </div>
-              </li>
-            ))}
-          </ul>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </div>
     </section>
   );
 };
+
 export default TeamSection;
