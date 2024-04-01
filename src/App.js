@@ -4,6 +4,7 @@ import Footer from "./Components/Footer";
 import Body from "./Components/Body/Body";
 import { Routes, Route } from "react-router-dom";
 import ScrollTopButton from "./Components/ScrollTopButton";
+import Test from "./Components/Test";
 
 function App() {
   return (

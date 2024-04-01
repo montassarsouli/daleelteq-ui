@@ -2,16 +2,12 @@ import React, { useState, useEffect } from "react";
 
 const ScrollTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
-
-  // Function to handle scrolling behavior
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
-
-  // Function to toggle button visibility based on scroll position
   const handleScroll = () => {
     const scrollTop = window.pageYOffset;
 
@@ -21,12 +17,8 @@ const ScrollTopButton = () => {
       setIsVisible(false);
     }
   };
-
-  // Add event listener for scroll
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup function to remove event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -37,7 +29,7 @@ const ScrollTopButton = () => {
       onClick={scrollToTop}
       className={`${
         isVisible ? "block" : "hidden"
-      } fixed bottom-5 right-5 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full transition-all duration-300`}
+      } fixed bottom-5 right-5 bg-green-900 hover:bg-green-600 text-white px-4 py-2 rounded-full transition-all duration-300`}
       title="Scroll to Top"
     >
       {/*<svg

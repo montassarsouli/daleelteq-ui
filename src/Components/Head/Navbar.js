@@ -10,7 +10,7 @@ const solutionsDropdown = [
       {
         title: "Mails & documents management",
         desc: "Duis aute irure dolor in reprehenderit",
-        path: "javascript:void(0)",
+        path: "../Solutions/MailDoc",
         icon: (
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -340,7 +340,7 @@ const Navbar = () => {
                         }
                       >
                         {item.title}
-                        {drapdownState.idx == idx && drapdownState.isActive ? (
+                        {drapdownState.idx === idx && drapdownState.isActive ? (
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 20 20"
@@ -378,7 +378,7 @@ const Navbar = () => {
                       </HashLink>
                     )}
                     {item.isDrapdown &&
-                    drapdownState.idx == idx &&
+                    drapdownState.idx === idx &&
                     drapdownState.isActive ? (
                       <div className="mt-6 inset-x-0 top-20 w-full md:absolute md:border-y md:shadow-md md:mt-0 md:bg-white z-50">
                         <ul className="max-w-screen-xl mx-auto grid items-center gap-6 md:p-8 md:grid-cols-2 lg:grid-cols-3">
