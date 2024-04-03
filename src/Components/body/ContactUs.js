@@ -1,3 +1,9 @@
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
+import AlertSuccess from "./PopUp/AlertSuccess";
+import AlertError from "./PopUp/AlertError";
+
+//npm i @emailjs/browser
 const ContactUs = () => {
   const contactMethods = [
     {
@@ -64,6 +70,27 @@ const ContactUs = () => {
     },
   ];
 
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_rnyqe1e", "template_dvw6vx7", form.current, {
+        publicKey: "Gq01q6A2CDoLLmnVd",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          <AlertSuccess />;
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          <AlertError />;
+        }
+      );
+  };
+
   return (
     <main className="py-14" id="contact">
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
@@ -90,11 +117,12 @@ const ContactUs = () => {
             </div>
           </div>
           <div className="flex-1 mt-12 sm:max-w-lg lg:max-w-md">
-            <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
+            <form ref={form} onSubmit={sendEmail} className="space-y-5">
               <div>
                 <label className="font-medium">Full name</label>
                 <input
                   type="text"
+                  name="user_name"
                   required
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-green-600 shadow-sm rounded-lg"
                 />
@@ -103,6 +131,7 @@ const ContactUs = () => {
                 <label className="font-medium">Email</label>
                 <input
                   type="email"
+                  name="user_email"
                   required
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-green-600 shadow-sm rounded-lg"
                 />
@@ -111,6 +140,7 @@ const ContactUs = () => {
                 <label className="font-medium">Company</label>
                 <input
                   type="text"
+                  name="user-company"
                   required
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-green-600 shadow-sm rounded-lg"
                 />
@@ -118,13 +148,16 @@ const ContactUs = () => {
               <div>
                 <label className="font-medium">Message</label>
                 <textarea
+                  name="message"
                   required
                   className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-green-600 shadow-sm rounded-lg"
                 ></textarea>
               </div>
-              <button className="w-full px-4 py-2 text-white font-medium bg-emerald-800 hover:bg-green-500 active:bg-green-600 rounded-lg duration-150">
-                Submit
-              </button>
+              <input
+                className="w-full px-4 py-2 text-white font-medium bg-emerald-800 hover:bg-green-500 active:bg-green-600 rounded-lg duration-150"
+                type="submit"
+                value="Submit"
+              />
             </form>
           </div>
         </div>
