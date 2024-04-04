@@ -1,7 +1,10 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import AlertSuccess from "./PopUp/AlertSuccess";
-import AlertError from "./PopUp/AlertError";
+import ReCAPTCHA from "react-google-recaptcha";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import AlertSuccess from "./Toastify/AlertSuccess";
+import AlertError from "./Toastify/AlertError";
 
 //npm i @emailjs/browser
 const ContactUs = () => {
@@ -82,15 +85,18 @@ const ContactUs = () => {
       .then(
         () => {
           console.log("SUCCESS!");
-          <AlertSuccess />;
         },
         (error) => {
           console.log("FAILED...", error.text);
-          <AlertError />;
         }
       );
   };
 
+  const handleChange = () => {
+    console.log("not a robot");
+  };
+
+  const notifySuccess = () => toast("Mail has been sent successfully.!");
   return (
     <main className="py-14" id="contact">
       <div className="max-w-screen-xl mx-auto px-4 text-gray-600 md:px-8">
@@ -153,11 +159,18 @@ const ContactUs = () => {
                   className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-green-600 shadow-sm rounded-lg"
                 ></textarea>
               </div>
+              <ReCAPTCHA
+                className=""
+                sitekey="6Le4z64pAAAAAHijnUGT2BMj2ybbqxTiDO3zR67h"
+                onChange={handleChange}
+              />
               <input
+                onClick={notifySuccess}
                 className="w-full px-4 py-2 text-white font-medium bg-emerald-800 hover:bg-green-500 active:bg-green-600 rounded-lg duration-150"
                 type="submit"
                 value="Submit"
               />
+              <ToastContainer />
             </form>
           </div>
         </div>

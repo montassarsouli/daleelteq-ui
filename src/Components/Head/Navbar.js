@@ -381,7 +381,7 @@ const Navbar = () => {
                     drapdownState.idx === idx &&
                     drapdownState.isActive ? (
                       <div className="mt-6 inset-x-0 top-20 w-full md:absolute md:border-y md:shadow-md md:mt-0 md:bg-white z-50">
-                        <ul className="max-w-screen-xl mx-auto grid items-center gap-6 md:p-8 md:grid-cols-2 lg:grid-cols-3">
+                        <ul className="max-w-screen-xl mx-auto grid items-center gap-6 md:p-8 md:grid-cols-2 lg:grid-cols-3 cursor-pointer">
                           {item?.navs.map((dropdownItem, idx) => (
                             <li key={idx}>
                               <p className="text-green-900 text-sm hover:text-green-700 hover:cursor-pointer">
@@ -416,34 +416,6 @@ const Navbar = () => {
                   </li>
                 );
               })}
-              <div className="flex-1 items-center justify-end gap-x-6 space-y-3 md:flex md:space-y-0">
-                <form
-                  onSubmit={(e) => e.preventDefault()}
-                  className="flex-1 items-center justify-start pb-4 md:flex md:pb-0"
-                >
-                  <div className="flex items-center gap-1 px-2 border rounded-lg">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      className="w-6 h-6 text-gray-400"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                      />
-                    </svg>
-                    <input
-                      type="text"
-                      placeholder="Search"
-                      className="w-full px-2 py-2 text-gray-500 bg-transparent rounded-md outline-none"
-                    />
-                  </div>
-                </form>
-              </div>
             </ul>
           </div>
         </div>

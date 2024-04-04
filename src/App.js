@@ -5,6 +5,7 @@ import Body from "./Components/Body/Body";
 import { Routes, Route } from "react-router-dom";
 import ScrollTopButton from "./Components/ScrollTopButton";
 import Test from "./Components/Test";
+import { useTranslation } from "react-i18next";
 
 function App() {
   return (
@@ -25,4 +26,8 @@ export default App;
         <Route path="/" element={} />
         <Route path="/" element={} />
       </Routes>
+*/
+/*
+npm i -S react-i18next i18next 
+npm i -S i18next-http-backend i18next-browser-languagedetector
 */
