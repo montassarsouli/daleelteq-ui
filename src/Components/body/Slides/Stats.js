@@ -1,23 +1,25 @@
 import React from "react";
 import img21 from "../ImagesBody/img21.jpg";
+import { useTranslation } from "react-i18next";
 
 const Stats = () => {
+  const { t } = useTranslation(["translation"]);
   const stats = [
     {
       data: "35K",
-      title: "Customers",
+      title: `${t("Customers")}`,
     },
     {
       data: "10K+",
-      title: "Downloads",
+      title: `${t("Downloads")}`,
     },
     {
       data: "40+",
-      title: "Countries",
+      title: `${t("Countries")}`,
     },
     {
       data: "30M+",
-      title: "Total revenue",
+      title: `${t("Total revenue")}`,
     },
   ];
 
@@ -31,14 +33,12 @@ const Stats = () => {
         />
         <div className="mt-6 gap-12 sm:mt-0 md:block lg:block lg:w-3/4">
           <p className="text-gray-800 text-3xl font-semibold sm:text-xl">
-            We do our best to make customers always happy
+            {t("Stats-title")}
           </p>
           <p className="mt-3 max-w-xl text-gray-600">
-            Daleelteq is a company that strives to make its customers happy.
-            They understand that customer satisfaction is key to the success of
-            any business, and they go above and beyond to ensure that their
-            customers are satisfied with their products and services.
+            {t("Stats-line1", { name: `${t("name")}` })}
           </p>
+          <p className="mt-3 max-w-xl text-gray-600">{t("Stats-line2")}</p>
           <ul className="mt-6 grid grid-cols-2 gap-y-8 gap-x-14">
             {stats.map((item, idx) => (
               <li key={idx} className="text-center">
@@ -53,7 +53,7 @@ const Stats = () => {
             href="javascript:void(0)"
             className="inline-flex gap-x-1 items-center text-green-700 hover:text-green-600 duration-150 font-medium mt-6"
           >
-            Learn more
+            {t("Read more")}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"

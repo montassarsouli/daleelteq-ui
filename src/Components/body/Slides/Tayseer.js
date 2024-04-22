@@ -1,7 +1,11 @@
 import React from "react";
 import img31 from "../ImagesBody/img31.jpg";
+import { useTranslation } from "react-i18next";
+
+//npm i @emailjs/browser
 
 const Tayseer = () => {
+  const { t } = useTranslation(["translation"]);
   return (
     <section className="py-12 lg:h-screen bg-gray-50">
       <div className="max-w-screen-xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-4 lg:items-center">
@@ -12,20 +16,17 @@ const Tayseer = () => {
         />
         <div>
           <p className="text-gray-800 text-3xl font-semibold sm:text-xl">
-            Build your documents management solution with help from our experts
+            {t("Tayseer-title")}
           </p>
           <p className="mt-3 text-gray-600">
-            Daleelteq provides a comprehensive framework for correspondences and
-            documents management labeled “Taysir”. Scalable and cloud-enabled
-            Taysir can meet organizations needs to manage all processes and
-            documents during their complete lifecycle from capture to archive,
-            then destruction.
+            {t("Tayseer-line1", { name: `${t("name")}` })}
           </p>
+          <p className="mt-3 text-gray-600">{t("Tayseer-line2")}</p>
           <a
             href="javascript:void(0)"
             className="inline-flex gap-x-1 items-center text-green-700 hover:text-green-600 duration-150 font-medium"
           >
-            Learn more
+            {t("Read more")}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"

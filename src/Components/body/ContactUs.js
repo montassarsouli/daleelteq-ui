@@ -5,9 +5,11 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AlertSuccess from "./Toastify/AlertSuccess";
 import AlertError from "./Toastify/AlertError";
+import { useTranslation } from "react-i18next";
 
 //npm i @emailjs/browser
 const ContactUs = () => {
+  const { t } = useTranslation(["translation"]);
   const contactMethods = [
     {
       icon: (
@@ -69,7 +71,7 @@ const ContactUs = () => {
           />
         </svg>
       ),
-      contact: "Lac, Tunis, Tunisia.",
+      contact: `${t("Adress")}`,
     },
   ];
 
@@ -103,13 +105,14 @@ const ContactUs = () => {
         <div className="max-w-lg gap-8 lg:justify-center lg:flex lg:max-w-none">
           <div className="max-w-lg space-y-3">
             <p className="text-gray-800 text-2xl font-semibold sm:text-2xl">
-              Please provide us with details on how we can be of assistance.
+              {t("Contact-title")}
             </p>
             <p>
-              We’re here to assist you and provide answers to any inquiries you
-              may have. We eagerly anticipate your communication. Kindly
-              complete the provided form or utilize the contact information
-              listed below.
+              {t("Contact-line1")}
+              <br />
+              {t("Contact-line2")}
+              <br />
+              {t("Contact-line3")}
             </p>
             <div>
               <ul className="mt-6 flex flex-wrap gap-x-10 gap-y-6 items-center">
@@ -125,7 +128,7 @@ const ContactUs = () => {
           <div className="flex-1 mt-12 sm:max-w-lg lg:max-w-md">
             <form ref={form} onSubmit={sendEmail} className="space-y-5">
               <div>
-                <label className="font-medium">Full name</label>
+                <label className="font-medium">{t("Full name")}</label>
                 <input
                   type="text"
                   name="user_name"
@@ -134,7 +137,7 @@ const ContactUs = () => {
                 />
               </div>
               <div>
-                <label className="font-medium">Email</label>
+                <label className="font-medium">{t("Email")}</label>
                 <input
                   type="email"
                   name="user_email"
@@ -143,7 +146,7 @@ const ContactUs = () => {
                 />
               </div>
               <div>
-                <label className="font-medium">Company</label>
+                <label className="font-medium">{t("Company")}</label>
                 <input
                   type="text"
                   name="user-company"
@@ -152,7 +155,7 @@ const ContactUs = () => {
                 />
               </div>
               <div>
-                <label className="font-medium">Message</label>
+                <label className="font-medium">{t("Message")}</label>
                 <textarea
                   name="message"
                   required
@@ -168,7 +171,7 @@ const ContactUs = () => {
                 onClick={notifySuccess}
                 className="w-full px-4 py-2 text-white font-medium bg-emerald-800 hover:bg-green-500 active:bg-green-600 rounded-lg duration-150"
                 type="submit"
-                value="Submit"
+                value={t("Submit")}
               />
               <ToastContainer />
             </form>
@@ -179,3 +182,4 @@ const ContactUs = () => {
   );
 };
 export default ContactUs;
+//Please provide us with details on how we can be of assistance.
