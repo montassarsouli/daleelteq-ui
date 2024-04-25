@@ -1,10 +1,12 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import img01 from "../image/img01.png";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import { useTranslation } from "react-i18next";
-import i18next from "i18next";
+import img01 from "../images/navbar/img01.png";
+import arabic from "../images/navbar/ar.png";
+import english from "../images/navbar/en.png";
+import LanguagesSelector from "./navComponents/LanguagesSelector";
 
 const Navbar = () => {
   const { i18n, t } = useTranslation(["translation"]);
@@ -282,7 +284,7 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`flex justify-between items-center relative z-20 bg-white w-full md:static md:text-sm md:border-none ${
+        className={`flex justify-between items-center relative px-8 z-20 bg-white w-full md:static md:text-sm md:border-none ${
           state ? "shadow-lg rounded-b-xl md:shadow-none" : ""
         }`}
       >
@@ -425,15 +427,7 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-        <div className="">
-          <select
-            value={localStorage.getItem("i18nextLng")}
-            onChange={handleLanguage}
-          >
-            <option value="ar">Arabic</option>
-            <option value="en">English</option>
-          </select>
-        </div>
+        <LanguagesSelector />
       </nav>
       {state ? (
         <div
